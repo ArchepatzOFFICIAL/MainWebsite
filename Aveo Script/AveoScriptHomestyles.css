@@ -1,0 +1,101 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root
+body
+{
+    display: flex;
+    left: 50px;
+    align-items: center;
+    min-height: 20vh;
+    background-color: #3b3b3b;
+}
+
+
+.characters{
+    position: relative;
+    top: 120px;
+    left: 560px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+    padding: 60px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+.characters:hover {
+    transform: scale(1.25);
+}
+
+
+
+.episodes{
+    position: relative;
+    top: 255px;
+    left: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+     padding: 30px;
+    text-align: center;
+     transition: 0.3s ease;
+}
+.episodes:hover {
+    transform: scale(1.25);
+}
+
+
+.maps{
+    position: relative;
+    top: 255px;
+    left: 200px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+     padding: 70px;
+       text-align: center;
+     transition: 0.3s ease;
+}
+.maps:hover {
+    transform: scale(1.25);
+}
+
+
+
+
+.music{
+    position: relative;
+    top: 380px;
+    left: -400px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+     padding: 60px;
+       text-align: center;
+     transition: 0.3s ease;
+}
+.music:hover {
+    transform: scale(1.25);
+}
+
+
+.gallery{
+    position: relative;
+     top: 380px;
+    left: -450px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+     padding: 60px;
+       text-align: center;
+     transition: 0.3s ease;
+}
+.gallery:hover {
+    transform: scale(1.25);
+}

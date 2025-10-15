@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root
+body
+{
+    display: flex;
+    left: 50px;
+    align-items: center;
+    min-height: 20vh;
+    background-color: #3b3b3b;
+}
+
+
+.posts{
+    position: relative;
+    top: 85px;
+    left: 610px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+      padding: 60px;
+       text-align: center;
+    transition: 0.3s ease;
+}
+.posts:hover{
+    transform: scale(1.25);
+}
+
+
+.minigames{
+    position: relative;
+    top: 255px;
+    left: 100px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+      padding: 60px;
+       text-align: center;
+    transition: 0.3s ease;
+}
+.minigames:hover{
+    transform: scale(1.25);
+}
+
+
+.gallery{
+    position: relative;
+    top: 255px;
+    left: 180px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+      padding: 60px;
+       text-align: center;
+    transition: 0.3s ease;
+}
+.gallery:hover{
+    transform: scale(1.25);
+}
+
+
+.creator{
+    position: relative;
+    top: 380px;
+    left: -345px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: cyan;
+      padding: 60px;
+       text-align: center;
+    transition: 0.3s ease;
+}
+.creator:hover{
+    transform: scale(1.25);
+}

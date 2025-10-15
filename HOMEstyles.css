@@ -1,0 +1,60 @@
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900
+);
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root
+body
+{
+    display: flex;
+    left: 50px;
+    align-items: center;
+    min-height: 20vh;
+    background-color: #3b3b3b;
+
+}
+
+
+.aveo_script{
+    position: relative;
+    top: 250px;
+    left: 180px;
+    font-size: 75px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(42, 199, 199);
+    background-color: white;
+    transition: 0.3s ease;
+}
+.aveo_script:hover {
+    transform: scale(1.25);
+}
+
+
+.archepatz{
+    position: relative;
+    top: 250px;
+    left: 560px;
+    font-size: 75px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(42, 199, 199);
+    background-color: white;
+    transition: 0.3s ease;
+}
+.archepatz:hover {
+    transform: scale(1.25);
+}
+
+
+.div_link{
+text-decoration: none;
+color: inherit;
+display: block;
+}
