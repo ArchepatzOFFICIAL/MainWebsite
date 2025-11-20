@@ -57,13 +57,20 @@
     display: block;
 }
 
-.AveoScript,
-.Archepatz{
+.AveoScript{
 border: 10px solid cyan;
 height: 500px;
-width: 550px;
+width: 800px;
 text-align: center;
 transition: 0.3s ease;
+}
+.Archepatz{
+border: 10px solid cyan;
+height: 100px;
+width: 150px;
+text-align: center;
+transition: 0.3s ease;
+top: 200px;
 }
 
 
@@ -73,4 +80,17 @@ transition: 0.3s ease;
 
 .Archepatz:hover{
     transform: scale(1.05);
+}
+
+.SORRY_MESSAGE{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 32px;
+    position: relative;
+    height: auto;
+    white-space: pre-line;
+    word-spacing: 0.5px;
+    width: 700px;
+    left: 200px;
+    top: 25px;
+ 
 }
