@@ -7,48 +7,146 @@
     <link rel="stylesheet" href="HOMEstyles.css">
 
 </head>
+
 <body>
 
+  <div class="BackgroundImage"></div>
+  
 
-  <div class="SORRY_MESSAGE">
+  <div class="hometext-container">
+    <div class="dark-aura-fortext"></div>
 
-    WEBSITE TEMPORARILY PRIVATE!!
-    Our dear HTML project needs to wait a few months!
+    <div class="text-clipping">
+    <div id="hometext" class="glitching"></div>
+  </div>
+  </div>
 
-    Private career aspects, delivery of content for upcoming deadlines, intensive focus on 'Aveo Script'.
-    Those are the reasons for a break in website's development!
+  <div class="darkness_overlay"></div>
 
-    As always, keep on working!!
-    Archepatz
+
+
+
+   <!--COPY PASTE AREA-->
+<div class="CyanFrame"> </div>
+
+  <div class="Proxitini_Sprite">
+    <img src="resources/channels4_profile-removebg-preview-2.svg" alt="proxitini_sprite">
+
+    <a href="secret_DIARY/diary.html" class="secret_hitbox0"></a>
   </div>
 
 
-  <!--
-    <div class="container">
-        <a href="Aveo Script/as HOME.html">
- <div class="AveoScript" >[aveo_script_imgref.png]</div>
- </a>
 
- <a href="AboutCreator/Home/ArchepatzHOME.html">
- <div class="Archepatz" >[archepatz_impgref.png]</div>
+ 
+  <div class="audio-player">
+<button class="loop-btn">ᦠ</button>
+<div class="player-main">
+<div class="progress-bar">
+<div class="progress"></div>
 </div>
-</a>
+</div>
+
+<button class="play-btn">▶</button>
+</div>
+
+<audio id="audio"></audio>
 
 
-  <div class="logo"> 
-    [LOGO_imgref.png] 
-    <ul class="dropdown_options">
-        <li>MAIN_HOME</li>
-        <li>AVEO_SCRIPT_HOME</li>
-        <li>ARCHEPATZ_HOME</li>
-    </ul>
+  <div class="MenuOptions">
+    <a href="HOME.html" class="menuoption_home"><ion-icon name="home"></ion-icon></a>
+    <a href="MAP/map.html" class="menuoption">MAP</a>
+    <a href="CHARACTERS/characters.html" class="menuoption">CHARACTERS</a>
+    <a href="TIMELINE/timeline.html" class="menuoption">TIMELINE</a>
+    <a href="ARCHIVE/archive.html" class="menuoption">ARCHIVE</a>
   </div>
-   
-</body>
+
+
+<div class="cursor-light"></div>
+
+<script>
+const cursorLight = document.querySelector('.cursor-light');
+
+document.addEventListener('mousemove', e => {
+  cursorLight.style.left = e.clientX + 'px';
+  cursorLight.style.top = e.clientY + 'px';
+});
+</script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
--->
+  <script>
+const audio = document.getElementById("audio");
+const playBtn = document.querySelector(".play-btn");
+const loopBtn = document.querySelector(".loop-btn");
+const progress = document.querySelector(".progress");
+const title = document.querySelector(".track-title");
+
+const tracks = [
+  "AVEOSCRIPT_MainTheme.wav",
+  "ElevatorMusic.wav",
+  "Get_Down_song_1wav.wav"
+];
+
+let firstPlay = true;
+let isLooping = false;
+let currentTrack = null;
+
+function selectTrack() {
+  if (firstPlay) {
+    currentTrack = tracks[0];
+    firstPlay = false;
+  } else {
+    const randomIndex = Math.floor(Math.random() * tracks.length);
+    currentTrack = tracks[randomIndex];
+  }
+
+  audio.src = "soundtracks/" + currentTrack;
+  audio.load();
+  title.textContent = currentTrack;
+}
+
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    if (!currentTrack) {
+      selectTrack();
+    }
+
+    audio.play().then(() => {
+      playBtn.textContent = "⏸";
+    }).catch(err => {
+      console.error("Audio failed:", err);
+    });
+
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶";
+  }
+});
+
+loopBtn.addEventListener("click", () => {
+  isLooping = !isLooping;
+  audio.loop = isLooping;
+  loopBtn.style.opacity = isLooping ? "1" : "0.4";
+});
+
+audio.addEventListener("timeupdate", () => {
+  if (audio.duration) {
+    const percent = (audio.currentTime / audio.duration) * 100;
+    progress.style.width = percent + "%";
+  }
+});
+
+audio.addEventListener("ended", () => {
+  playBtn.textContent = "▶";
+  currentTrack = null;
+});
+</script>
+
+  <!--COPY PASTE AREA-->
+
+  <script src="homescreentext.js"></script>
+
+</body>
 
 </html>
